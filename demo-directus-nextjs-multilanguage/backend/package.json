@@ -1,0 +1,46 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^9.9.1"
+  },
+  "scripts": {
+    "dev": "directus start",
+    "start":"directus-extension build -w --no-minify",
+    "build": "directus-extension build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directus": "^9.22.4",
+    "directus-extension-api-docs": "^1.4.6",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+		"@directus/extensions-sdk": "9.9.1",
+		"directus-codestyle": "github:dimitrov-adrian/directus-codestyle",
+		"typescript": "^4.6.3",
+		"vue": "^3.2.31"
+	},
+  "prettier": "directus-codestyle/prettier",
+  "stylelint": {
+    "extends": "directus-codestyle/stylelint"
+  },
+
+  "eslintConfig": {
+    "extends": "./node_modules/directus-codestyle/.eslintrc.js",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "vue/multi-word-component-names": 0
+    }
+  }
+}
